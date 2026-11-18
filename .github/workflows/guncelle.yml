@@ -8,12 +8,14 @@ on:
 jobs:
   calistir:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Depoyu Indir
         uses: actions/checkout@v3
 
       - name: Python Yukle
-        uses: setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
