@@ -1,5 +1,4 @@
-
-name: Playlist Validation
+name: Playlist Monitor
 
 on:
   workflow_dispatch:
@@ -10,14 +9,41 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check playlist
+      - name: Check channels
         run: |
-          test -s kanallar.m3u
-          grep -q '^#EXTM3U' kanallar.m3u
-          echo "Playlist file exists and has a valid header."
+          python3 - <<'PY'
+          import urllib.request
+          import urllib.error
+
+          with open("kanallar.m3u", encoding="utf-8") as f:
+              lines = [x.strip() for x in f if x.strip()]
+
+          channels = []
+          name = "Unknown"
+
+          for line in lines:
+              if line.startswith("#EXTINF"):
+                  name = line.split(",")[-1].strip()
+              elif line.startswith("http"):
+                  channels.append((name, line))
+
+          for name, url in channels:
+              try:
+                  req = urllib.request.Request(
+                      url,
+                      headers={"Range": "bytes=0-0"},
+                      method="GET"
+                  )
+                  with urllib.request.urlopen(req, timeout=15) as r:
+                      print(f"{name}: HTTP {r.status}")
+              except urllib.error.HTTPError as e:
+                  print(f"{name}: HTTP {e.code}")
+              except Exception as e:
+                  print(f"{name}: ERİŞİM HATASI ({type(e).__name__})")
+          PY
