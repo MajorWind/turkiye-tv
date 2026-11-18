@@ -2,25 +2,13 @@
 #EXTM3U
 
 #EXTINF:-1 tvg-name="ATV" group-title="Ulusal",ATV HD
-https://YAYIN-ADRESI-1.m3u8
-
-#EXTINF:-1 tvg-name="Show TV" group-title="Ulusal",Show TV HD
-https://YAYIN-ADRESI-2.m3u8
+https://trkvz.daioncdn.net/atv/atv_1080p.m3u8?e=1795061762&st=XL5Q33OeDMNQmNNnAqrOZA&sid=8xi26jf172ts&app=d1ce2d40-5256-4550-b02e-e73c185a314e&ce=3
 
 #EXTINF:-1 tvg-name="Kanal D" group-title="Ulusal",Kanal D HD
-https://YAYIN-ADRESI-3.m3u8
-
-#EXTINF:-1 tvg-name="Star TV" group-title="Ulusal",Star TV HD
-https://YAYIN-ADRESI-4.m3u8
-
-#EXTINF:-1 tvg-name="TRT 1" group-title="Ulusal",TRT 1 HD
-https://YAYIN-ADRESI-5.m3u8
-
-#EXTINF:-1 tvg-name="A Haber" group-title="Haber",A Haber
-https://YAYIN-ADRESI-6.m3u8
+https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?&sid=8xhzwvwj93ke&app=da2109ea-5dfe-4107-89ab-23593336ed61&ce=3
 
 #EXTINF:-1 tvg-name="NTV" group-title="Haber",NTV
-https://YAYIN-ADRESI-7.m3u8
+https://dogus.daioncdn.net/ntv/ntv_1080p.m3u8?token=e8c0dec16bf84c8cc187224d13811c0e705fd2c58b25d7ee&sid=8xi817qpqq5z&app=c68bddbe-3dbf-49f7-892a-93de5ae37f1f&ce=3
 
 #EXTINF:-1 tvg-name="CNN Türk" group-title="Haber",CNN Türk
-https://YAYIN-ADRESI-8.m3u8
+https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/track_4_1000/playlist.m3u8?&live=true&app=com.cnnturk&st=nDY69ObacWvA5H-nFM5y7Q&e=1795031396
