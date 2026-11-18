@@ -1,0 +1,29 @@
+name: Baglanti Guncelleme Gorevi
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  calistir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu Indir
+        uses: actions/checkout@v3
+
+      - name: Python Yukle
+        uses: setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Programı Calistir
+        run: python get_kanald.py
+
+      - name: Degisiklikleri Kaydet
+        run: |
+          git config --global user.name "Otomatik Bot"
+          git config --global user.email "bot@yerel.com"
+          git add liste.m3u
+          git commit -m "Gunluk m3u8 linki guncellendi" || exit 0
+          git push
