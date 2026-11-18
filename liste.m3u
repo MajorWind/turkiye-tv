@@ -1,4 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="Kanal D" group-title="Ulusal",Kanal D HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
-https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&amp;ce=3|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,Kanal D HD
+https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&amp;ce=3
