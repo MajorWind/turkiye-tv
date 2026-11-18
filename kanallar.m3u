@@ -1,0 +1,26 @@
+
+#EXTM3U
+
+#EXTINF:-1 tvg-name="ATV" group-title="Ulusal",ATV HD
+https://YAYIN-ADRESI-1.m3u8
+
+#EXTINF:-1 tvg-name="Show TV" group-title="Ulusal",Show TV HD
+https://YAYIN-ADRESI-2.m3u8
+
+#EXTINF:-1 tvg-name="Kanal D" group-title="Ulusal",Kanal D HD
+https://YAYIN-ADRESI-3.m3u8
+
+#EXTINF:-1 tvg-name="Star TV" group-title="Ulusal",Star TV HD
+https://YAYIN-ADRESI-4.m3u8
+
+#EXTINF:-1 tvg-name="TRT 1" group-title="Ulusal",TRT 1 HD
+https://YAYIN-ADRESI-5.m3u8
+
+#EXTINF:-1 tvg-name="A Haber" group-title="Haber",A Haber
+https://YAYIN-ADRESI-6.m3u8
+
+#EXTINF:-1 tvg-name="NTV" group-title="Haber",NTV
+https://YAYIN-ADRESI-7.m3u8
+
+#EXTINF:-1 tvg-name="CNN Türk" group-title="Haber",CNN Türk
+https://YAYIN-ADRESI-8.m3u8
