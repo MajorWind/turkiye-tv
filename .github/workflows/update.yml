@@ -1,0 +1,23 @@
+
+name: Playlist Validation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check playlist
+        run: |
+          test -s kanallar.m3u
+          grep -q '^#EXTM3U' kanallar.m3u
+          echo "Playlist file exists and has a valid header."
